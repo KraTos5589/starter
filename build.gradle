@@ -1,0 +1,26 @@
+plugins {
+	id 'java'
+}
+
+group = 'com.linkedin.starter'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+	mavenCentral()
+	gradlePluginPortal()
+}
+
+dependencies {
+	implementation 'redis.clients:jedis:3.8.0'
+	testImplementation "org.junit.jupiter:junit-jupiter:5.8.1"
+	testImplementation "org.testcontainers:testcontainers:1.18.3"
+	testImplementation "org.testcontainers:junit-jupiter:1.18.3"
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+tasks.jar {
+	enabled = false
+}
