@@ -10,7 +10,6 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.shaded.org.apache.commons.lang3.tuple.Pair;
 import redis.clients.jedis.Jedis;
 
-
 @Testcontainers
 @ExtendWith(DockerComposeExtension.class)
 public class RedisTest {
